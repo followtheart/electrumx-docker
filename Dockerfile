@@ -39,4 +39,4 @@ RUN cd ~ \
     && cat ~/scripts/electrumx/env/coins.py >> ~/electrumx/lib/coins.py \
     && ln -s ~/scripts/electrumx  ~/service/electrumx
 
-CMD ["bash","-c","svscan ~/service"]
+CMD ["bash","-c","cp /env/* /home/electrumx/scripts/electrumx/env/ && svscan ~/service"]
