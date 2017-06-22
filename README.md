@@ -1,9 +1,14 @@
 # electrumx-docker
 Dockerfile for [electrumx](https://github.com/kyuupichan/electrumx) on Ubuntu with leveldb and daemontools.
 
-## Build by yourself
+## Usage
 ### Step 1. Configuration
-Edit `env/COIN` to your coin.
+```
+git clone https://github.com/followtheart/electrumx-docker.git
+cd electrumx-docker
+```
+
+Then,Edit `env/COIN` to your coin.
 
 Edit `env/DAEMON_URL` accordingly.Need to match your daemon.
 
@@ -12,30 +17,24 @@ For AltCoins,edit your coin class in `env/coins.py`.`env/coins.py` will be appen
 Leave others defaults
 
 ### Step 2.Run
-Build docker image :
+Run from docker hub:
 ```shell
-      cd electrumx-docker
+    docker run -v env:/env  -idt followtheart/electrumx
+```
+
+Or,build your special env docker image :
+```shell
       docker build -t electrumx .
+      docker run -v -idt electrumx
 ```
 
-Run docker:
-```shell
-    docker run -idt electrumx
-```
+## THANKS
 
-## Or pull image from docker hub.
+### Warmly welcome all kinds of suggestions
 
-```
-      docker pull followtheart/electrumx
-```
-Or
-```
-      docker run --name electrumx -idt followtheart/electrumx
-```
-then enter docker
+Thanks for suggestions from:
 
-Edit `/home/electrumx/scripts/electrumx/env/COIN` to your coin.
+[kyuupichan](https://github.com/kyuupichan/electrumx)
 
-Edit `/home/electrumx/scripts/electrumx/env/DAEMON_URL` accordingly.Need to match your daemon.
+[qinshulei](https://github.com/qinshulei)
 
-For AltCoins,edit your coin class in `/home/electrumx/electrumx/lib/coins.py`.
