@@ -1,4 +1,5 @@
 FROM ubuntu
+MAINTAINER followtheart "followtheart@outlook.com"
 
 RUN apt-get update \
     && apt-get install -y software-properties-common --no-install-recommends \
