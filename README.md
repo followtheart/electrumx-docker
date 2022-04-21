@@ -12,7 +12,7 @@ Then,Edit `env/COIN` to your coin.
 
 Edit `env/DAEMON_URL` accordingly.Need to match your daemon.
 
-For AltCoins,edit your coin class in `env/coins.py`.`env/coins.py` will be append to [electrumx/lib/coins.py](https://github.com/kyuupichan/electrumx/blob/master/lib/coins.py)
+For AltCoins,edit your coin class in `env/coins.py`.`env/coins.py` will be append to [electrumx/lib/coins.py](https://github.com/kyuupichan/electrumx/blob/master/electrumx/lib/coins.py)
 
 Leave others defaults
 
